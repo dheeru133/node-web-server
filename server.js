@@ -2,17 +2,21 @@
  * @Author: Dheeraj Chaudhary 
  * @Date: 2018-02-07 02:15:23 
  * @Last Modified by: Dheeraj.Chaudhary@contractor.hallmark.com
- * @Last Modified time: 2018-02-07 16:40:12
+ * @Last Modified time: 2018-02-08 11:48:29
  */
 
 // #############REQUIRE#######################################
 const express = require('express');
 const hbs = require('hbs');
 const fs = require('fs');
+const port = process.env.Port || 3000;
 
 // #############APP############################################
 var app = express();
-app.listen(3000);
+app.listen(port, () => {
+    console.log(`Server is running oon port  ${port}`);
+
+});
 
 
 // #############Partials/Helpers##############################

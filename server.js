@@ -2,7 +2,7 @@
  * @Author: Dheeraj Chaudhary 
  * @Date: 2018-02-07 02:15:23 
  * @Last Modified by: Dheeraj.Chaudhary@contractor.hallmark.com
- * @Last Modified time: 2018-02-08 12:07:12
+ * @Last Modified time: 2018-02-08 12:27:50
  */
 
 // #############REQUIRE#######################################
@@ -71,7 +71,7 @@ app.get('/home', (req, res) => {
     // };
     // res.send(JSON.stringify(jsObject, undefined, 2));
     res.render('home.hbs', {
-        welcome: 'Welcome Dheeraj',
+        title: 'Welcome Dheeraj',
         currentYear: new Date().getFullYear()
     });
 });
@@ -83,5 +83,14 @@ app.get('/about', (req, res) => {
     res.render('about.hbs', {
         title: 'About Page',
         currentYear: new Date().getFullYear()
+    });
+});
+
+//################ABOUT#######################################
+
+app.get('/projects', (req, res) => {
+    // res.send('<h1>Hello Express - web framework for Node.js application</h1>');
+    res.render('projects.hbs', {
+        title: 'Projects'
     });
 });
